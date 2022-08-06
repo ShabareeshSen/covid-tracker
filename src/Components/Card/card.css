@@ -1,0 +1,169 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.card {
+  max-width: 75%;
+  min-width: 75%;
+  height: 14vw;
+  margin: 8px auto;
+  border-radius: 5px;
+  box-shadow: 0 0 32px rgba(0, 0, 0, 0.15);
+  color: #001219;
+  position: relative;
+}
+
+.content:hover {
+  cursor: pointer;
+}
+.content-heading {
+  text-transform: capitalize;
+  font-size: large;
+}
+
+.grid-card {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  height: 25%;
+  padding: 5px;
+  margin-top: 10px;
+  font-weight: 550;
+}
+
+.close-btn {
+  border-radius: 50%;
+  padding: 6.5px 9px;
+  background-color: #adb5bd;
+  color: #001219;
+  font-size: 10px;
+  margin-right: 8px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.district-name {
+  margin-right: 8px;
+  justify-self: end;
+  grid-column: 3;
+}
+
+.content {
+  margin-top: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  text-align: center;
+  padding: 10px;
+  background-color: #001219;
+  color: #adb5bd;
+  font-weight: 550;
+  height: 80%;
+}
+
+ul {
+  margin-top: 10px;
+  list-style: none;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-left: 40px;
+}
+.icon-pack {
+  height: 12px;
+  margin-right: 25px;
+  fill: #adb5bd;
+}
+
+.btn-cr {
+  position: absolute;
+  top: 65%;
+  border-radius: 50%;
+  padding: 5px 10px;
+  border: none;
+  color: #001219;
+  background-color: #adb5bd;
+  font-weight: bold;
+  font-size: 18px;
+}
+.btn-cr:hover {
+  cursor: pointer;
+}
+.left {
+  left: -13px;
+}
+.right {
+  right: -13px;
+}
+
+.hide {
+  display: none;
+}
+
+.select-dist {
+  border: none;
+  background-color: #fff;
+  color: #001219;
+  border-bottom: 1px solid #001219;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 800px) {
+  .content {
+    height: auto;
+  }
+  .card {
+    max-width: 50%;
+    min-width: 50%;
+    height: 14vw;
+    margin: 8px auto;
+  }
+  .btn-cr {
+    top: 100%;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .content {
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    text-align: center;
+    padding: 10px;
+    background-color: #001219;
+    color: #adb5bd;
+    font-weight: 550;
+    height: auto;
+  }
+  .card {
+    max-width: 90%;
+    min-width: 90%;
+    height: 34vw;
+    border-radius: 5px;
+    box-shadow: 0 0 32px rgba(0, 0, 0, 0.15);
+    color: #001219;
+    position: relative;
+  }
+}
+
+@media screen and (max-width: 550px) {
+
+  .btn-cr {
+    top: 90%;
+  }
+  .card {
+    max-width: 80%;
+    min-width: 80%;
+    height: 40vw;
+   
+  }
+}
+
+@media screen and (max-width: 1120px)and(min-width:501px) {
+  .card {
+    height: auto;
+  }
+}

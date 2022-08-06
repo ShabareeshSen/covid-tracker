@@ -1,24 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.css";
+import Index from "./Pages/Index.jsx";
+import { displayDataContext } from "./Context/context";
+import { useState } from "react";
+import Details from "./Pages/Details";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 function App() {
+  const [convertedData, setconvertedData] = useState([]);
+  const [stateClicked, setStateClicked] = useState('');
+  const [selectedDistrict, setSelectedDistrict] = useState();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <displayDataContext.Provider
+      value={{
+        convertedData,
+        setconvertedData,
+        stateClicked,
+        setStateClicked,
+        selectedDistrict,
+        setSelectedDistrict,
+      }}
+    >
+      <Router>
+        <div>
+          <Routes>
+            <Route exact path="/" element={<Index />} />
+            <Route exact path="/detail/:stateForDetail" element={<Details />} />
+          </Routes>
+        </div>
+      </Router>
+    </displayDataContext.Provider>
   );
 }
 
